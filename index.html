@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Relatable | Digital Design Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;       /* Modern Indigo */
+            --primary-dark: #4338ca;
+            --secondary: #0f172a;    /* Slate Dark */
+            --text-main: #1e293b;    /* Slate Gray */
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            padding: 1rem 10%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #eef2ff 100%);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Services Grid */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--secondary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+
+        footer {
+            text-align: center;
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            .hero h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tech Relatable</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#website">Templates</a>
+            <a href="#logos">Logos</a>
+            <a href="#visiting">Visiting Cards</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Design That Works.</h2>
+        <p>Elevate your brand with modern templates and AI-powered visual assets tailored for your business.</p>
+        <a href="#website" class="btn">View Our Work</a>
+    </section>
+
+    <section id="website">
+        <h2 class="section-title">Website Templates</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Business Pro</h3>
+                <p>High-conversion landing pages for startups and agencies.</p>
+            </div>
+            <div class="card">
+                <h3>Portfolio</h3>
+                <p>Minimalist designs to showcase your creative journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="logos" style="background-color: #f1f5f9;">
+        <h2 class="section-title">Logos & Banners</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Brand Identity</h3>
+                <p>Vector logos that remain crisp at any size.</p>
+            </div>
+            <div class="card">
+                <h3>AI Banners</h3>
+                <p>Stunning, context-aware banners generated with cutting-edge AI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="visiting">
+        <h2 class="section-title">Visiting Cards</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Digital First</h3>
+                <p>Cards designed with QR codes for the modern networking era.</p>
+            </div>
+            <div class="card">
+                <h3>Classic Print</h3>
+                <p>Premium card designs ready for high-quality offset printing.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tech Relatable. All Rights Reserved.</p>
+        <p><a href="https://tech-relatable.xyz/">tech-relatable.xyz</a></p>
+    </footer>
+
+</body>
+</html>
